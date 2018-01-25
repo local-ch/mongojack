@@ -14,9 +14,11 @@
         </servers>
 </settings>
 
-VERSION=2.6.1-LOCAL
+VERSION=2.8.1-LOCAL1
 
-mvn deploy:deploy-file -DgroupId=org.mongojack -DartifactId=mongojack -Dversion=$VERSION -Dpackaging=jar -Dfile=target/mongojack-$VERSION.jar -DrepositoryId=nexus -Durl=http://nexus.intra.local.ch:8081/nexus/content/repositories/releases/ -DgeneratePom=false -DpomFile=pom.xml
+mvn clean package
 
-mvn deploy:deploy-file -DgroupId=org.mongojack -DartifactId=mongojack -Dversion=$VERSION -Dpackaging=java-source -Dfile=target/mongojack-$VERSION.jar -DrepositoryId=nexus -Durl=http://nexus.intra.local.ch:8081/nexus/content/repositories/releases/ -DgeneratePom=false
+mvn deploy:deploy-file -DgroupId=org.mongojack -DartifactId=mongojack -Dversion=$VERSION -Dpackaging=jar -Dfile=target/mongojack-$VERSION.jar -DrepositoryId=nexus -Durl=http://bamboo.intra.local.ch:8081/repository/releases/ -DgeneratePom=false -DpomFile=pom.xml
+
+mvn deploy:deploy-file -DgroupId=org.mongojack -DartifactId=mongojack -Dversion=$VERSION -Dpackaging=java-source -Dfile=target/mongojack-$VERSION.jar -DrepositoryId=nexus -Durl=http://bamboo.intra.local.ch:8081/repository/releases/ -DgeneratePom=false
 ```
