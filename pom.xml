@@ -3,7 +3,7 @@
 
   <groupId>org.mongojack</groupId>
   <artifactId>mongojack</artifactId>
-  <version>2.8.2</version>
+  <version>2.8.2-LOCAL1</version>
   <packaging>bundle</packaging>
 
   <name>MongoJack</name>
@@ -19,7 +19,7 @@
     <dependency>
       <groupId>org.mongodb</groupId>
       <artifactId>mongodb-driver</artifactId>
-      <version>3.6.1</version>
+      <version>3.6.4</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
